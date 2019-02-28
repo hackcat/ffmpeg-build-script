@@ -378,6 +378,12 @@ cd $PACKAGES/ffmpeg-4.1 || exit
 	--disable-shared \
 	--disable-ffplay \
 	--disable-doc \
+	--disable-hwaccels \
+	--disable-d3d11va \
+	--disable-dxva2 \
+	--disable-vaapi \
+	--disable-vdpau \
+	--disable-videotoolbox \
 	--enable-gpl \
 	--enable-version3 \
 	--enable-nonfree \
@@ -394,8 +400,7 @@ cd $PACKAGES/ffmpeg-4.1 || exit
 	--enable-libopencore_amrwb \
 	--enable-libopencore_amrnb \
 	--enable-filters \
-	--enable-libvidstab \
-	--enable-libaom
+	--enable-libvidstab
 
 execute make -j $MJOBS
 execute make install
